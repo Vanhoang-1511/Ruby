@@ -43,7 +43,7 @@ arr.each_index {
     |index|
     puts "#{arr[index].show()}"
 }
-print "Danh sách sinh viên sau khi sắp xếp:\n"
+print "Danh sách sinh viên sau khi sắp xếp:\n\n"
 for x in arr.sort_by{|stu| [stu.average]}.reverse do
     puts "#{x.show}"
 end
