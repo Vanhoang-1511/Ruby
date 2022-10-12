@@ -4,7 +4,6 @@ require_relative "nhanvien"
 require_relative "kysu"
 
 class QLCB
-    listCb124 = []
     def themcanbo
         puts "Nhập họ tên :"
         hoten124 = gets.to_s
@@ -40,9 +39,9 @@ class QLCB
     def searchCanbo(listCb124)
         puts "Nhap tu khoa: "
         key = gets.to_s
-        listSerched = listCb124.select{ |canbo| canbo.name.include?(key) }
+        listSerched124 = listCb124.select{ |canbo| canbo.name.include?(key) }
         puts "Ket qua tim kiem"
-        listSerched.each do |canbo| 
+        listSerched124.each do |canbo| 
             canbo.Info
         end
     end
@@ -58,22 +57,22 @@ qlcb124 = QLCB.new()
 listCb124 = []
 
 loop do
-puts ""
-puts "Chuong trinh quan ly can bo"
-puts "1/Them can bo"
-puts "2/Tim kiem"
-puts "3/Hien thi danh sach"
-puts "4/Thoat"
-puts "Chon chuc nang:"
-option124 = gets.chomp
-case option124
-    when "1"
-        listCb124.push(qlcb124.themcanbo)
-    when "2"
-        qlcb124.searchCanbo(listCb124)
-    when "3"
-        qlcb124.showAll(listCb124)
-    when "4"
-        break
+    puts ""
+    puts "Chuong trinh quan ly can bo"
+    puts "1/Them can bo"
+    puts "2/Tim kiem"
+    puts "3/Hien thi danh sach"
+    puts "4/Thoat"
+    puts "Chon chuc nang:"
+    option124 = gets.chomp
+    case option124
+        when "1"
+            listCb124.push(qlcb124.themcanbo)
+        when "2"
+            qlcb124.searchCanbo(listCb124)
+        when "3"
+            qlcb124.showAll(listCb124)
+        when "4"
+            break
     end
 end

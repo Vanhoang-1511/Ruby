@@ -1,4 +1,4 @@
-require_relative "canbo"
+    require_relative "canbo"
 class Nhanvien < Canbo
     attr_accessor :congviec124
     def Info
